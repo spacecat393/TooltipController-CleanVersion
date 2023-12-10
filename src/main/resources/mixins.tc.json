@@ -1,0 +1,8 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "com.nali.tc.mixin",
+  "refmap": "refmap.tc.json",
+  "mixins": [],
+  "client": ["MixinGuiUtils", "MixinMinecraft"],
+  "server": []
+}

@@ -1,0 +1,11 @@
+key.categories.tc=TooltipController
+key.tcleft=Left
+key.tcright=Right
+key.tcup=Up
+key.tcdown=Down
+key.tccenter=Center
+key.tcscaleup=Scale Up
+key.tcscaledown=Scale Down
+key.tcrotatex=Rotate X
+key.tcrotatey=Rotate Y
+key.tcrotatez=Rotate Z
