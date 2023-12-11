@@ -11,7 +11,7 @@ import org.apache.logging.log4j.Logger;
 public class TC
 {
     @Instance
-    public static TC MAIN;
+    public static TC I;
 
     public static Logger LOGGER;
 

@@ -6,10 +6,10 @@ import org.lwjgl.input.Keyboard;
 
 public class TCRotateY extends MixKeyBinding
 {
-    public static TCRotateY TCROTATEY;
+    public static TCRotateY I;
     public TCRotateY(String name)
     {
         super(name, Keyboard.KEY_NUMPAD0, Reference.MOD_ID);
-        TCROTATEY = this;
+        I = this;
     }
 }

@@ -6,10 +6,10 @@ import org.lwjgl.input.Keyboard;
 
 public class TCLeft extends MixKeyBinding
 {
-    public static TCLeft TCLEFT;
+    public static TCLeft I;
     public TCLeft(String name)
     {
         super(name, Keyboard.KEY_NUMPAD4, Reference.MOD_ID);
-        TCLEFT = this;
+        I = this;
     }
 }

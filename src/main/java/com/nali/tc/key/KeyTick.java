@@ -27,21 +27,21 @@ public class KeyTick
     {
         if
         (
-            key == TCUp.TCUP.getKeyCode() ||
-            key == TCDown.TCDOWN.getKeyCode() ||
-            key == TCLeft.TCLEFT.getKeyCode() ||
-            key == TCRight.TCRIGHT.getKeyCode() ||
-            key == TCScaleUp.TCSCALEUP.getKeyCode() ||
-            key == TCScaleDown.TCSCALEDOWN.getKeyCode() ||
-            key == TCRotateX.TCROTATEX.getKeyCode() ||
-            key == TCRotateY.TCROTATEY.getKeyCode() ||
-            key == TCRotateZ.TCROTATEZ.getKeyCode()
+            key == TCUp.I.getKeyCode() ||
+            key == TCDown.I.getKeyCode() ||
+            key == TCLeft.I.getKeyCode() ||
+            key == TCRight.I.getKeyCode() ||
+            key == TCScaleUp.I.getKeyCode() ||
+            key == TCScaleDown.I.getKeyCode() ||
+            key == TCRotateX.I.getKeyCode() ||
+            key == TCRotateY.I.getKeyCode() ||
+            key == TCRotateZ.I.getKeyCode()
         )
         {
             com.nali.key.KeyTick.addKey(key);
         }
 
-        if (key == TCCenter.TCCENTER.getKeyCode())
+        if (key == TCCenter.I.getKeyCode())
         {
             X = 0;
             Y = 0;
@@ -55,49 +55,49 @@ public class KeyTick
 
     public static void apply()
     {
-        if (KEY_MAP.containsKey(TCUp.TCUP.getKeyCode()))
+        if (KEY_MAP.containsKey(TCUp.I.getKeyCode()))
         {
             Y -= STEP * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCDown.TCDOWN.getKeyCode()))
+        if (KEY_MAP.containsKey(TCDown.I.getKeyCode()))
         {
             Y += STEP * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCLeft.TCLEFT.getKeyCode()))
+        if (KEY_MAP.containsKey(TCLeft.I.getKeyCode()))
         {
             X -= STEP * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCRight.TCRIGHT.getKeyCode()))
+        if (KEY_MAP.containsKey(TCRight.I.getKeyCode()))
         {
             X += STEP * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCScaleUp.TCSCALEUP.getKeyCode()))
+        if (KEY_MAP.containsKey(TCScaleUp.I.getKeyCode()))
         {
             S += 0.1F * DataLoader.TD;
             setS();
         }
 
-        if (KEY_MAP.containsKey(TCScaleDown.TCSCALEDOWN.getKeyCode()))
+        if (KEY_MAP.containsKey(TCScaleDown.I.getKeyCode()))
         {
             S -= 0.1F * DataLoader.TD;
             setS();
         }
 
-        if (KEY_MAP.containsKey(TCRotateX.TCROTATEX.getKeyCode()))
+        if (KEY_MAP.containsKey(TCRotateX.I.getKeyCode()))
         {
             RX += 0.1F * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCRotateY.TCROTATEY.getKeyCode()))
+        if (KEY_MAP.containsKey(TCRotateY.I.getKeyCode()))
         {
             RY += 0.1F * DataLoader.TD;
         }
 
-        if (KEY_MAP.containsKey(TCRotateZ.TCROTATEZ.getKeyCode()))
+        if (KEY_MAP.containsKey(TCRotateZ.I.getKeyCode()))
         {
             RZ += 0.1F * DataLoader.TD;
         }

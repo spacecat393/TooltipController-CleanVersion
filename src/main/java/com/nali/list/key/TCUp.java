@@ -6,10 +6,10 @@ import org.lwjgl.input.Keyboard;
 
 public class TCUp extends MixKeyBinding
 {
-    public static TCUp TCUP;
+    public static TCUp I;
     public TCUp(String name)
     {
         super(name, Keyboard.KEY_NUMPAD8, Reference.MOD_ID);
-        TCUP = this;
+        I = this;
     }
 }

@@ -6,10 +6,10 @@ import org.lwjgl.input.Keyboard;
 
 public class TCScaleDown extends MixKeyBinding
 {
-    public static TCScaleDown TCSCALEDOWN;
+    public static TCScaleDown I;
     public TCScaleDown(String name)
     {
         super(name, Keyboard.KEY_NUMPAD3, Reference.MOD_ID);
-        TCSCALEDOWN = this;
+        I = this;
     }
 }
