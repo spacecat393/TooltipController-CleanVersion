@@ -4,10 +4,10 @@ import com.nali.key.MixKeyBinding;
 import com.nali.tc.system.Reference;
 import org.lwjgl.input.Keyboard;
 
-public class TCScaleUp extends MixKeyBinding
+public class TcScaleUp extends MixKeyBinding
 {
-    public static TCScaleUp I;
-    public TCScaleUp(String name)
+    public static TcScaleUp I;
+    public TcScaleUp(String name)
     {
         super(name, Keyboard.KEY_NUMPAD9, Reference.MOD_ID);
         I = this;

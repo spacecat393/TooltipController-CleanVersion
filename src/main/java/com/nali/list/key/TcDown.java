@@ -4,12 +4,12 @@ import com.nali.key.MixKeyBinding;
 import com.nali.tc.system.Reference;
 import org.lwjgl.input.Keyboard;
 
-public class TCUp extends MixKeyBinding
+public class TcDown extends MixKeyBinding
 {
-    public static TCUp I;
-    public TCUp(String name)
+    public static TcDown I;
+    public TcDown(String name)
     {
-        super(name, Keyboard.KEY_NUMPAD8, Reference.MOD_ID);
+        super(name, Keyboard.KEY_NUMPAD2, Reference.MOD_ID);
         I = this;
     }
 }

@@ -2,6 +2,7 @@ package com.nali.tc.key;
 
 import com.nali.list.key.*;
 import com.nali.system.DataLoader;
+import com.nali.system.Timing;
 import com.nali.tc.system.Reference;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -9,6 +10,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.relauncher.Side;
 
 import static com.nali.key.KeyTick.KEY_MAP;
+import static com.nali.system.Timing.TD;
 
 @Mod.EventBusSubscriber(modid = Reference.MOD_ID, value = Side.CLIENT)
 public class KeyTick
@@ -27,21 +29,21 @@ public class KeyTick
     {
         if
         (
-            key == TCUp.I.getKeyCode() ||
-            key == TCDown.I.getKeyCode() ||
-            key == TCLeft.I.getKeyCode() ||
-            key == TCRight.I.getKeyCode() ||
-            key == TCScaleUp.I.getKeyCode() ||
-            key == TCScaleDown.I.getKeyCode() ||
-            key == TCRotateX.I.getKeyCode() ||
-            key == TCRotateY.I.getKeyCode() ||
-            key == TCRotateZ.I.getKeyCode()
+            key == TcUp.I.getKeyCode() ||
+            key == TcDown.I.getKeyCode() ||
+            key == TcLeft.I.getKeyCode() ||
+            key == TcRight.I.getKeyCode() ||
+            key == TcScaleUp.I.getKeyCode() ||
+            key == TcScaleDown.I.getKeyCode() ||
+            key == TcRotateX.I.getKeyCode() ||
+            key == TcRotateY.I.getKeyCode() ||
+            key == TcRotateZ.I.getKeyCode()
         )
         {
             com.nali.key.KeyTick.addKey(key);
         }
 
-        if (key == TCCenter.I.getKeyCode())
+        if (key == TcCenter.I.getKeyCode())
         {
             X = 0;
             Y = 0;
@@ -55,51 +57,51 @@ public class KeyTick
 
     public static void apply()
     {
-        if (KEY_MAP.containsKey(TCUp.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcUp.I.getKeyCode()))
         {
-            Y -= STEP * DataLoader.TD;
+            Y -= STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TCDown.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcDown.I.getKeyCode()))
         {
-            Y += STEP * DataLoader.TD;
+            Y += STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TCLeft.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcLeft.I.getKeyCode()))
         {
-            X -= STEP * DataLoader.TD;
+            X -= STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TCRight.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcRight.I.getKeyCode()))
         {
-            X += STEP * DataLoader.TD;
+            X += STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TCScaleUp.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcScaleUp.I.getKeyCode()))
         {
-            S += 0.1F * DataLoader.TD;
+            S += 0.1F * TD;
             setS();
         }
 
-        if (KEY_MAP.containsKey(TCScaleDown.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcScaleDown.I.getKeyCode()))
         {
-            S -= 0.1F * DataLoader.TD;
+            S -= 0.1F * TD;
             setS();
         }
 
-        if (KEY_MAP.containsKey(TCRotateX.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcRotateX.I.getKeyCode()))
         {
-            RX += 0.1F * DataLoader.TD;
+            RX += 0.1F * TD;
         }
 
-        if (KEY_MAP.containsKey(TCRotateY.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcRotateY.I.getKeyCode()))
         {
-            RY += 0.1F * DataLoader.TD;
+            RY += 0.1F * TD;
         }
 
-        if (KEY_MAP.containsKey(TCRotateZ.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TcRotateZ.I.getKeyCode()))
         {
-            RZ += 0.1F * DataLoader.TD;
+            RZ += 0.1F * TD;
         }
     }
 
@@ -107,11 +109,11 @@ public class KeyTick
     {
         if (S >= 1.0F)
         {
-            STEP += 0.1F * DataLoader.TD;
+            STEP += 0.1F * TD;
         }
         else
         {
-            STEP -= 0.1F * DataLoader.TD;
+            STEP -= 0.1F * TD;
         }
     }
 
