@@ -1,8 +1,6 @@
 package com.nali.tc.key;
 
 import com.nali.list.key.*;
-import com.nali.system.DataLoader;
-import com.nali.system.Timing;
 import com.nali.tc.system.Reference;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.fml.common.Mod;

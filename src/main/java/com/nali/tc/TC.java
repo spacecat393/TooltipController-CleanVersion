@@ -16,19 +16,8 @@ public class TC
     public static Logger LOGGER;
 
     @EventHandler
-    public void onFMLPreInitializationEvent(FMLPreInitializationEvent fmlpreinitializationevent)
+    public void onFMLPreInitializationEvent(FMLPreInitializationEvent event)
     {
-        LOGGER = fmlpreinitializationevent.getModLog();
-//        if (fmlpreinitializationevent.getSide().isClient())
-//        {
-//            KeyRegistry.set();
-//            for (ModContainer mod : Loader.instance().getActiveModList())
-//            {
-//                if (mod.getModId().equals("invmove"))
-//                {
-//                    KeyTick.MOD = true;
-//                }
-//            }
-//        }
+        LOGGER = event.getModLog();
     }
 }
