@@ -79,29 +79,29 @@ public class KeyTick
 
         if (KEY_MAP.containsKey(TcScaleUp.I.getKeyCode()))
         {
-            S += 0.1F * TD;
+            S += 0.01F * TD;
             setS();
         }
 
         if (KEY_MAP.containsKey(TcScaleDown.I.getKeyCode()))
         {
-            S -= 0.1F * TD;
+            S -= 0.01F * TD;
             setS();
         }
 
         if (KEY_MAP.containsKey(TcRotateX.I.getKeyCode()))
         {
-            RX += 0.1F * TD;
+            RX += 1.1F * TD;
         }
 
         if (KEY_MAP.containsKey(TcRotateY.I.getKeyCode()))
         {
-            RY += 0.1F * TD;
+            RY += 1.1F * TD;
         }
 
         if (KEY_MAP.containsKey(TcRotateZ.I.getKeyCode()))
         {
-            RZ += 0.1F * TD;
+            RZ += 1.1F * TD;
         }
     }
 
@@ -109,18 +109,18 @@ public class KeyTick
     {
         if (S >= 1.0F)
         {
-            STEP += 0.1F * TD;
+            STEP += 1.1F * TD;
         }
         else
         {
-            STEP -= 0.1F * TD;
+            STEP -= 1.1F * TD;
         }
     }
 
     @SubscribeEvent
-    public static void setRenderTooltipEvent(RenderTooltipEvent.Pre rendertooltipevent)
+    public static void setRenderTooltipEvent(RenderTooltipEvent.Pre event)
     {
-        PX = rendertooltipevent.getX();
-        PY = rendertooltipevent.getY();
+        PX = event.getX();
+        PY = event.getY();
     }
 }
