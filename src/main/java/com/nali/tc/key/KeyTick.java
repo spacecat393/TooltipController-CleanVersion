@@ -78,13 +78,13 @@ public class KeyTick
         if (KEY_MAP.containsKey(TcScaleUp.I.getKeyCode()))
         {
             S += 0.01F * TD;
-            setS();
+//            setS();
         }
 
         if (KEY_MAP.containsKey(TcScaleDown.I.getKeyCode()))
         {
             S -= 0.01F * TD;
-            setS();
+//            setS();
         }
 
         if (KEY_MAP.containsKey(TcRotateX.I.getKeyCode()))
@@ -103,17 +103,17 @@ public class KeyTick
         }
     }
 
-    public static void setS()
-    {
-        if (S >= 1.0F)
-        {
-            STEP += 1.1F * TD;
-        }
-        else
-        {
-            STEP -= 1.1F * TD;
-        }
-    }
+//    public static void setS()
+//    {
+//        if (S >= 1.0F)
+//        {
+//            STEP += 1.1F * TD;
+//        }
+//        else
+//        {
+//            STEP -= 1.1F * TD;
+//        }
+//    }
 
     @SubscribeEvent
     public static void setRenderTooltipEvent(RenderTooltipEvent.Pre event)
