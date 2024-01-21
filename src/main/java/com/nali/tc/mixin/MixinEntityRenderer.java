@@ -8,6 +8,8 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+import static com.nali.tc.key.KeyTick.APPLY_FUNCTION;
+
 @Mixin(EntityRenderer.class)
 public class MixinEntityRenderer
 {
@@ -15,7 +17,7 @@ public class MixinEntityRenderer
     private void updateCameraAndRenderHEAD(float partialTicks, long nanoTime, CallbackInfo ci)
     {
         GL11.glPushMatrix();
-        KeyTick.apply();
+        APPLY_FUNCTION.apply(null);
 
         GL11.glTranslated(KeyTick.X, KeyTick.Y, 0.0D);
 
