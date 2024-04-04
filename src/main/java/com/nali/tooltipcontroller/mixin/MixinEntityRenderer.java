@@ -1,6 +1,6 @@
-package com.nali.tc.mixin;
+package com.nali.tooltipcontroller.mixin;
 
-import com.nali.tc.key.KeyTick;
+import com.nali.tooltipcontroller.key.KeyTick;
 import net.minecraft.client.renderer.EntityRenderer;
 import org.lwjgl.opengl.GL11;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-import static com.nali.tc.key.KeyTick.APPLY_FUNCTION;
+import static com.nali.tooltipcontroller.key.KeyTick.APPLY_FUNCTION;
 
 @Mixin(EntityRenderer.class)
 public class MixinEntityRenderer

@@ -1,6 +1,6 @@
 {
-  "package": "com.nali.tc.mixin",
-  "refmap": "mixins.tc.refmap.json",
+  "package": "com.nali.tooltipcontroller.mixin",
+  "refmap": "mixins.tooltipcontroller.refmap.json",
   "target": "@env(DEFAULT)",
   "compatibilityLevel": "JAVA_8",
   "required": true,

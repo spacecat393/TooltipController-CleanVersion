@@ -1,7 +1,7 @@
-package com.nali.tc.key;
+package com.nali.tooltipcontroller.key;
 
 import com.nali.list.key.*;
-import com.nali.tc.system.Reference;
+import com.nali.tooltipcontroller.system.Reference;
 import net.minecraftforge.client.event.RenderTooltipEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -31,21 +31,21 @@ public class KeyTick
     {
         if
         (
-            key == TcUp.I.getKeyCode() ||
-            key == TcDown.I.getKeyCode() ||
-            key == TcLeft.I.getKeyCode() ||
-            key == TcRight.I.getKeyCode() ||
-            key == TcScaleUp.I.getKeyCode() ||
-            key == TcScaleDown.I.getKeyCode() ||
-            key == TcRotateX.I.getKeyCode() ||
-            key == TcRotateY.I.getKeyCode() ||
-            key == TcRotateZ.I.getKeyCode()
+            key == TooltipcontrollerUp.I.getKeyCode() ||
+            key == TooltipcontrollerDown.I.getKeyCode() ||
+            key == TooltipcontrollerLeft.I.getKeyCode() ||
+            key == TooltipcontrollerRight.I.getKeyCode() ||
+            key == TooltipcontrollerScaleUp.I.getKeyCode() ||
+            key == TooltipcontrollerScaleDown.I.getKeyCode() ||
+            key == TooltipcontrollerRotateX.I.getKeyCode() ||
+            key == TooltipcontrollerRotateY.I.getKeyCode() ||
+            key == TooltipcontrollerRotateZ.I.getKeyCode()
         )
         {
             com.nali.key.KeyTick.addKey(key);
         }
 
-        if (key == TcCenter.I.getKeyCode())
+        if (key == TooltipcontrollerCenter.I.getKeyCode())
         {
             X = 0;
             Y = 0;
@@ -61,49 +61,49 @@ public class KeyTick
 
     public static Void apply()
     {
-        if (KEY_MAP.containsKey(TcUp.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerUp.I.getKeyCode()))
         {
             Y -= STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TcDown.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerDown.I.getKeyCode()))
         {
             Y += STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TcLeft.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerLeft.I.getKeyCode()))
         {
             X -= STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TcRight.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerRight.I.getKeyCode()))
         {
             X += STEP * TD;
         }
 
-        if (KEY_MAP.containsKey(TcScaleUp.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerScaleUp.I.getKeyCode()))
         {
             S += 0.01F * TD;
 //            setS();
         }
 
-        if (KEY_MAP.containsKey(TcScaleDown.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerScaleDown.I.getKeyCode()))
         {
             S -= 0.01F * TD;
 //            setS();
         }
 
-        if (KEY_MAP.containsKey(TcRotateX.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerRotateX.I.getKeyCode()))
         {
             RX += 1.1F * TD;
         }
 
-        if (KEY_MAP.containsKey(TcRotateY.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerRotateY.I.getKeyCode()))
         {
             RY += 1.1F * TD;
         }
 
-        if (KEY_MAP.containsKey(TcRotateZ.I.getKeyCode()))
+        if (KEY_MAP.containsKey(TooltipcontrollerRotateZ.I.getKeyCode()))
         {
             RZ += 1.1F * TD;
         }

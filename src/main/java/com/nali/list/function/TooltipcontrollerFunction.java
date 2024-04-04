@@ -1,11 +1,11 @@
 package com.nali.list.function;
 
-import com.nali.tc.key.KeyTick;
+import com.nali.tooltipcontroller.key.KeyTick;
 import org.lwjgl.input.Keyboard;
 
-public class TcFunction
+public class TooltipcontrollerFunction
 {
-    public TcFunction()
+    public TooltipcontrollerFunction()
     {
         KeyTick.FUNCTION = v -> KeyTick.run(Keyboard.getEventKey());
         KeyTick.APPLY_FUNCTION = v -> KeyTick.apply();

@@ -1,0 +1,11 @@
+key.categories.tooltipcontroller=TooltipController
+key.tooltipcontroller.left=Left
+key.tooltipcontroller.right=Right
+key.tooltipcontroller.up=Up
+key.tooltipcontroller.down=Down
+key.tooltipcontroller.center=Center
+key.tooltipcontroller.scaleup=Scale Up
+key.tooltipcontroller.scaledown=Scale Down
+key.tooltipcontroller.rotatex=Rotate X
+key.tooltipcontroller.rotatey=Rotate Y
+key.tooltipcontroller.rotatez=Rotate Z
