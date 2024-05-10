@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public class MixinEntityRenderer
 {
     @Inject(method = "updateCameraAndRender", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/client/ForgeHooksClient;drawScreen(Lnet/minecraft/client/gui/GuiScreen;IIF)V", shift = At.Shift.BEFORE))
-    private void updateCameraAndRenderHEAD(float partialTicks, long nanoTime, CallbackInfo ci)
+    private void nali_tooltipcontroller_updateCameraAndRenderHEAD(float partialTicks, long nanoTime, CallbackInfo ci)
     {
         GL11.glPushMatrix();
 //        APPLY_FUNCTION.apply(null);
@@ -29,7 +29,7 @@ public class MixinEntityRenderer
     }
 
     @Inject(method = "updateCameraAndRender", at = @At(value = "INVOKE", target = "Lnet/minecraftforge/client/ForgeHooksClient;drawScreen(Lnet/minecraft/client/gui/GuiScreen;IIF)V", shift = At.Shift.AFTER))
-    private void updateCameraAndRenderTAIL(float partialTicks, long nanoTime, CallbackInfo ci)
+    private void nali_tooltipcontroller_updateCameraAndRenderTAIL(float partialTicks, long nanoTime, CallbackInfo ci)
     {
         GL11.glPopMatrix();
     }
